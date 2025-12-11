@@ -1,0 +1,50 @@
+[
+  {
+    "product_id": "personal_loan_standard",
+    "product_name": "Personal Loan - Standard",
+    "description": "Flexible personal loan for various needs",
+    "min_amount": 100000,
+    "max_amount": 5000000,
+    "min_tenure": 12,
+    "max_tenure": 84,
+    "base_interest_rate": 12.5,
+    "processing_fee_percent": 1.0,
+    "features": [
+      "Instant Disbursal",
+      "Quick Approval",
+      "Minimal Documentation"
+    ]
+  },
+  {
+    "product_id": "personal_loan_premium",
+    "product_name": "Personal Loan - Premium",
+    "description": "Premium personal loan with special benefits",
+    "min_amount": 500000,
+    "max_amount": 10000000,
+    "min_tenure": 12,
+    "max_tenure": 84,
+    "base_interest_rate": 11.5,
+    "processing_fee_percent": 1.5,
+    "features": [
+      "Lower Interest Rate",
+      "Priority Processing",
+      "Dedicated Support"
+    ]
+  },
+  {
+    "product_id": "home_loan_standard",
+    "product_name": "Home Loan - Standard",
+    "description": "Affordable home loan with flexible repayment",
+    "min_amount": 500000,
+    "max_amount": 50000000,
+    "min_tenure": 60,
+    "max_tenure": 240,
+    "base_interest_rate": 10.0,
+    "processing_fee_percent": 0.5,
+    "features": [
+      "Property Coverage",
+      "Tax Benefits",
+      "Long Tenure"
+    ]
+  }
+]

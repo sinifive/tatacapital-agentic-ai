@@ -1,0 +1,27 @@
+{
+  "800_plus": {
+    "rating": "Excellent",
+    "interest_rate_reduction": 2.0,
+    "approval_probability": 0.99
+  },
+  "750_799": {
+    "rating": "Good",
+    "interest_rate_reduction": 1.5,
+    "approval_probability": 0.95
+  },
+  "700_749": {
+    "rating": "Fair",
+    "interest_rate_reduction": 0.5,
+    "approval_probability": 0.85
+  },
+  "650_699": {
+    "rating": "Average",
+    "interest_rate_reduction": 0.0,
+    "approval_probability": 0.7
+  },
+  "below_650": {
+    "rating": "Poor",
+    "interest_rate_reduction": 0.0,
+    "approval_probability": 0.4
+  }
+}
