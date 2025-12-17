@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tata Capital – Agentic AI Architecture</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 1100px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #0b63b8;
+    }
+    .mermaid {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Tata Capital – Agentic AI Architecture</h2>
+
+  <div class="mermaid">
+graph LR
+
+User["User (Mobile)"] --> UI["Frontend UI (React)"]
+
+UI --> Master["Master Agent<br/>(Orchestrator)"]
+
+Master --> Sales["Sales Agent<br/>(LLM – Gemini)"]
+Master --> Verify["Verification Agent<br/>(ML KYC & Fraud Detection)"]
+Master --> Underwrite["Underwriting Agent<br/>(Rules Engine)"]
+Master --> Sanction["Sanction Letter Agent<br/>(PDF + eSign)"]
+
+Sales --> Master
+Verify --> Master
+Underwrite --> Master
+Sanction --> Master
+
+Verify --> Credit["Credit Bureau / Mock API"]
+Verify --> ML["ML Models<br/>(Document & Deepfake Detection)"]
+
+Sanction --> Storage["Secure Storage<br/>(PDF & Logs)"]
+
+style User fill:#4CAF50,color:#fff
+style Master fill:#0b63b8,color:#fff
+style Sales fill:#FFC107,color:#000
+style Verify fill:#FF9800,color:#fff
+style Underwrite fill:#9C27B0,color:#fff
+style Sanction fill:#3F51B5,color:#fff
+style Storage fill:#607D8B,color:#fff
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: "default" });
+</script>
+
+</body>
+</html>

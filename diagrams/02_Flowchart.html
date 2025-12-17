@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tata Capital – Loan Flow</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 1400px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    h2 {
+      text-align: center;
+      color: #0b63b8;
+      margin-bottom: 15px;
+    }
+    .mermaid {
+      background: #fafafa;
+      padding: 25px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>End-to-End Loan Application Flow</h2>
+
+  <div class="mermaid">
+flowchart TD
+
+A["USER VISITS WEBSITE"] --> B["LOGIN / APPLY NOW"]
+
+B --> C["MASTER AGENT"]
+
+C --> D["SALES AGENT<br/>(CHATBOT)"]
+
+D --> E["UPLOAD KYC DOCUMENTS"]
+
+E --> F["VERIFICATION AGENT<br/>(ML KYC)"]
+
+F --> G{"KYC VALID?"}
+
+G -->|NO| R1["APPLICATION REJECTED"]
+
+G -->|YES| H["FETCH CREDIT SCORE"]
+
+H --> I["UNDERWRITING AGENT<br/>(RULES ENGINE)"]
+
+I --> J{"LOAN APPROVED?"}
+
+J -->|NO| R2["LOAN REJECTED"]
+
+J -->|YES| K["SANCTION LETTER AGENT"]
+
+K --> L["GENERATE & STORE PDF"]
+
+L --> M["USER DOWNLOADS SANCTION LETTER"]
+
+%% COLORS
+style A fill:#4CAF50,color:#fff,font-size:22px
+style M fill:#4CAF50,color:#fff,font-size:22px
+
+style C fill:#0b63b8,color:#fff,font-size:22px
+
+style D fill:#FFC107,color:#000,font-size:22px
+style F fill:#FF9800,color:#fff,font-size:22px
+style I fill:#9C27B0,color:#fff,font-size:22px
+style K fill:#3F51B5,color:#fff,font-size:22px
+
+style R1 fill:#F44336,color:#fff,font-size:22px
+style R2 fill:#F44336,color:#fff,font-size:22px
+
+style G fill:#E0E0E0,color:#000,font-size:22px
+style J fill:#E0E0E0,color:#000,font-size:22px
+
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: "default" });
+</script>
+
+</body>
+</html>

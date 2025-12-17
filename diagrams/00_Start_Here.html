@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Capital - Project Overview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #667eea;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .files-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .file-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .file-card:hover {
+            transform: translateY(-10px);
+        }
+        .file-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .file-content {
+            padding: 20px;
+        }
+        .file-desc {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .file-features {
+            list-style: none;
+        }
+        .file-features li {
+            color: #2c3e50;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .file-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .open-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .open-btn:hover {
+            transform: scale(1.05);
+        }
+        .info-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .info-box h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .info-item {
+            padding: 15px;
+            background: #f5f7fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .info-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .info-item span {
+            color: #2c3e50;
+        }
+        .footer {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .footer p {
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏦 Tata Capital Fintech Platform</h1>
+            <p>Complete Digital Lending Solution with AI Chatbot</p>
+        </div>
+
+        <div class="files-grid">
+            <!-- Architecture -->
+            <div class="file-card">
+                <div class="file-header">🏗️ Architecture Diagram</div>
+                <div class="file-content">
+                    <p class="file-desc">System architecture with 4 layers: Frontend, Backend API, Database, and External Services</p>
+                    <ul class="file-features">
+                        <li>Frontend components (React)</li>
+                        <li>Backend APIs (Express.js)</li>
+                        <li>Database schema (SQLite)</li>
+                        <li>AI integrations (Gemini)</li>
+                        <li>Service connections</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('01_Architecture.html')">📖 Open Diagram</button>
+                </div>
+            </div>
+
+            <!-- Flowchart -->
+            <div class="file-card">
+                <div class="file-header">🔄 User Journey Flowchart</div>
+                <div class="file-content">
+                    <p class="file-desc">Complete user application flow with decision points and all possible paths</p>
+                    <ul class="file-features">
+                        <li>Registration & Login</li>
+                        <li>Loan selection process</li>
+                        <li>Chat-based inquiry</li>
+                        <li>Application submission</li>
+                        <li>Verification & approval</li>
+                        <li>Loan disbursement</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('02_Flowchart.html')">📖 Open Flowchart</button>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="file-card">
+                <div class="file-header">📊 Charts & Analytics</div>
+                <div class="file-content">
+                    <p class="file-desc">6 beautiful data visualizations with real analytics</p>
+                    <ul class="file-features">
+                        <li>Pie chart - Status distribution</li>
+                        <li>Bar chart - Approval by credit</li>
+                        <li>Line graph - Monthly trends</li>
+                        <li>Histogram - Loan amounts</li>
+                        <li>Doughnut - Loan purposes</li>
+                        <li>Radar - Risk factors</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('03_Charts_Graphs.html')">📖 View Charts</button>
+                </div>
+            </div>
+
+            <!-- Wireframes -->
+            <div class="file-card">
+                <div class="file-header">🎨 UI Wireframes</div>
+                <div class="file-content">
+                    <p class="file-desc">6 detailed wireframe screens showing all key user interfaces</p>
+                    <ul class="file-features">
+                        <li>Homepage layout</li>
+                        <li>Login/Register</li>
+                        <li>Application form</li>
+                        <li>Status tracking</li>
+                        <li>My applications</li>
+                        <li>ChatBot interface</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('04_Wireframes.html')">📖 View Wireframes</button>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="file-card">
+                <div class="file-header">🛠️ Tech Stack & Modules</div>
+                <div class="file-content">
+                    <p class="file-desc">Complete technology stack with all frontend and backend modules</p>
+                    <ul class="file-features">
+                        <li>Frontend: React, Vite, Tailwind</li>
+                        <li>Backend: Express.js, SQLite</li>
+                        <li>AI: Google Gemini API</li>
+                        <li>Module breakdown</li>
+                        <li>Database schema</li>
+                        <li>Line of code count</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('05_Tech_Stack.html')">📖 View Stack</button>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="file-card">
+                <div class="file-header">📋 Project Summary</div>
+                <div class="file-content">
+                    <p class="file-desc">Quick reference guide for your PowerPoint presentation</p>
+                    <ul class="file-features">
+                        <li>Key features overview</li>
+                        <li>Technology highlights</li>
+                        <li>Project statistics</li>
+                        <li>Core capabilities</li>
+                        <li>AI integration details</li>
+                        <li>Future roadmap</li>
+                    </ul>
+                    <button class="open-btn" onclick="openFile('06_Summary.html')">📖 View Summary</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>🎯 Key Project Metrics</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Total Code</strong>
+                    <span>3,200+ Lines of Code</span>
+                </div>
+                <div class="info-item">
+                    <strong>Frontend Components</strong>
+                    <span>15+ React Components</span>
+                </div>
+                <div class="info-item">
+                    <strong>API Endpoints</strong>
+                    <span>12+ REST APIs</span>
+                </div>
+                <div class="info-item">
+                    <strong>Database Tables</strong>
+                    <span>5 Relational Tables</span>
+                </div>
+                <div class="info-item">
+                    <strong>AI Integration</strong>
+                    <span>Google Gemini API</span>
+                </div>
+                <div class="info-item">
+                    <strong>Development Time</strong>
+                    <span>Production Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>✨ Core Features</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>🤖 AI ChatBot (TIA)</strong>
+                    <span>Intelligent conversational lending assistant</span>
+                </div>
+                <div class="info-item">
+                    <strong>📝 Smart Application</strong>
+                    <span>Form collection via chat - no page redirect</span>
+                </div>
+                <div class="info-item">
+                    <strong>🔍 KYC Verification</strong>
+                    <span>Automated document verification</span>
+                </div>
+                <div class="info-item">
+                    <strong>📊 Credit Scoring</strong>
+                    <span>Hash-based algorithm for risk assessment</span>
+                </div>
+                <div class="info-item">
+                    <strong>📄 Digital Signatures</strong>
+                    <span>PDF generation with electronic signatures</span>
+                </div>
+                <div class="info-item">
+                    <strong>🔐 Security</strong>
+                    <span>bcryptjs password hashing + secure sessions</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>💡 How to Use These Files</h2>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">
+                Each HTML file is a standalone presentation document that can be opened in any web browser. 
+                You can:
+            </p>
+            <ol style="color: #666; padding-left: 20px; line-height: 2;">
+                <li><strong>Right-click on any diagram/chart</strong> and select "Save image as PNG" to download individual items</li>
+                <li><strong>Use Print function (Ctrl+P)</strong> and select "Save as PDF" to get entire page as PDF</li>
+                <li><strong>Take screenshots</strong> of charts and paste directly into PowerPoint</li>
+                <li><strong>Use Ctrl+Shift+S</strong> (Windows) or Cmd+Shift+4 (Mac) for quick screenshot tool</li>
+                <li><strong>Open in browser tab</strong> and display on second monitor while creating presentation</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <h2>🚀 Ready for Presentation</h2>
+            <p>✅ All diagrams are production-ready with professional colors and styling</p>
+            <p>✅ High-resolution outputs suitable for PowerPoint presentations</p>
+            <p>✅ Compatible with all presentation software (PowerPoint, Google Slides, Keynote)</p>
+            <p style="margin-top: 20px; font-weight: bold; color: #667eea;">
+                👉 Start by opening any HTML file above to preview the content!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openFile(filename) {
+            window.open(filename, '_blank');
+        }
+    </script>
+</body>
+</html>

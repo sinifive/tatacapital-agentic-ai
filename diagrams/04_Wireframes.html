@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tata Capital – Wireframes</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: White;
+    padding: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .header {
+    background: #6a5acd;
+    color: #ffffff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .box {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .btn {
+    background: #4caf50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .btn.secondary {
+    background: #2196f3;
+  }
+
+  .status {
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .done { background: #d4edda; color: #155724; }
+  .progress { background: #fff3cd; color: #856404; }
+  .pending { background: #e2e3e5; color: #383d41; }
+
+  .chat-user {
+    background: #e3f2fd;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .chat-bot {
+    background: #fff8e1;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Low-Fidelity Wireframes – Agentic AI Loan Platform</h1>
+
+<div class="grid">
+
+  <!-- HOME -->
+  <div class="card">
+    <div class="header">1. Home Page</div>
+    <div class="box">Tata Capital Navigation</div>
+    <div class="box" style="height:70px; font-weight:bold; text-align:center;">
+      Hero Banner<br/>“Get Loans Instantly”
+    </div>
+    <div class="box">Benefits<br/>• Low Interest<br/>• Fast Approval<br/>• Zero Hassle</div>
+    <div class="btn">Apply Now</div>
+    <div class="btn secondary">Chat with TIA</div>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="card">
+    <div class="header">2. Login</div>
+    <div class="box">Email / Phone</div>
+    <div class="box">Password / OTP</div>
+    <div class="btn">Login</div>
+    <div class="box" style="text-align:center;">Forgot Password | Sign Up</div>
+    <div class="btn secondary">Google Sign-In</div>
+  </div>
+
+  <!-- LOAN APPLICATION -->
+  <div class="card">
+    <div class="header">3. Loan Application</div>
+    <div class="box">Personal Information</div>
+    <div class="box">Employment Details</div>
+    <div class="box">Loan Amount & Tenure</div>
+    <div class="box">Document Upload<br/>(Aadhaar | PAN | Payslip)</div>
+    <div class="btn">Submit Application</div>
+  </div>
+
+  <!-- STATUS TRACKING -->
+  <div class="card">
+    <div class="header">4. Status Tracking</div>
+    <div class="box">Application ID: TC123456</div>
+    <div class="status done">Step 1: Submitted ✔</div>
+    <div class="status progress">Step 2: Verification ⏳</div>
+    <div class="status pending">Step 3: Credit Check</div>
+    <div class="status pending">Step 4: Sanction</div>
+    <div class="box">Estimated Time: 15 minutes</div>
+  </div>
+
+  <!-- MY APPLICATIONS -->
+  <div class="card">
+    <div class="header">5. My Applications</div>
+    <div class="status done">Home Loan – Approved</div>
+    <div class="status progress">Business Loan – Under Review</div>
+    <div class="status done">Education Loan – Sanctioned</div>
+    <div class="box" style="text-align:center;">+ Apply for New Loan</div>
+  </div>
+
+  <!-- CHATBOT -->
+  <div class="card">
+    <div class="header">6. Chatbot (TIA)</div>
+    <div class="chat-user">Hi, I want to apply for a loan</div>
+    <div class="chat-bot">Sure! What is your full name?</div>
+    <div class="chat-user">Raj Kumar</div>
+    <div class="chat-bot">Thanks Raj. Please share your PAN.</div>
+    <div class="btn">Send</div>
+  </div>
+
+</div>
+
+</body>
+</html>

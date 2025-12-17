@@ -1,0 +1,54 @@
+{
+  "underwriting_rules": {
+    "credit_score_threshold": {
+      "enabled": true,
+      "min_score": 700,
+      "action": "REJECT",
+      "description": "Reject if credit score below 700"
+    },
+    "pre_approved_limit": {
+      "enabled": true,
+      "rule": "if requested_amount <= pre_approved_limit then APPROVE",
+      "description": "Approve if requested amount within pre-approved limit"
+    },
+    "salary_check_threshold": {
+      "enabled": true,
+      "multiplier": 2,
+      "emi_to_salary_ratio": 0.5,
+      "rule": "if requested_amount <= 2*pre_approved_limit and EMI <= 50% of monthly_salary then APPROVE",
+      "description": "For amounts up to 2x pre-limit, check EMI viability"
+    },
+    "default_rejection": {
+      "enabled": true,
+      "rule": "else REJECT",
+      "description": "Reject if no other conditions met"
+    }
+  },
+  "emi_calculation": {
+    "formula": "EMI = (P * r * (1 + r)^n) / ((1 + r)^n - 1)",
+    "where": {
+      "P": "Principal amount (loan amount)",
+      "r": "Monthly interest rate (annual_roi / 12 / 100)",
+      "n": "Number of months (tenure_months)"
+    },
+    "default_tenure_months": 60,
+    "default_annual_roi": 9.99
+  },
+  "risk_buckets": {
+    "low": {
+      "score_range": "750-900",
+      "pre_approved_limit": 500000,
+      "annual_roi": 7.99
+    },
+    "medium": {
+      "score_range": "700-749",
+      "pre_approved_limit": 350000,
+      "annual_roi": 9.99
+    },
+    "high": {
+      "score_range": "300-699",
+      "pre_approved_limit": 200000,
+      "annual_roi": 12.5
+    }
+  }
+}

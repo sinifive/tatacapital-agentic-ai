@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Impact Analysis – Agentic AI Loan Processing</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #0b63b8;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .analysis {
+    margin-top: 25px;
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Impact of Agentic AI on Loan Processing</h1>
+<h3>Manual Process vs AI-Assisted Process</h3>
+
+<div class="container">
+  <canvas id="impactChart"></canvas>
+
+  <div class="analysis">
+    <strong>Analysis:</strong><br>
+    The graph shows a significant reduction in loan processing time after introducing the Agentic AI system.
+    Automated sales interaction, ML-based KYC verification, and rule-driven underwriting reduce approval time
+    from several hours to a few minutes, improving customer experience and operational efficiency.
+  </div>
+</div>
+
+<script>
+const ctx = document.getElementById('impactChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Manual Loan Process', 'Agentic AI Loan Process'],
+    datasets: [{
+      label: 'Average Processing Time (Hours)',
+      data: [6, 0.2],
+      backgroundColor: ['#F44336', '#4CAF50']
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Time (Hours)'
+        }
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>
